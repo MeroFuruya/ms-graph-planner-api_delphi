@@ -860,7 +860,7 @@ begin
     AJAppliedCategories := TJSONObject.Create;
     for i := 0 to Length(Task.AppliedCategories) - 1 do
     begin
-      AJAppliedCategories.AddPair(Task.AppliedCategories[i].Name, TJSONBool.Create(Task.AppliedCategories[i].enabled));
+      AJAppliedCategories.AddPair(Task.AppliedCategories[i].id, TJSONBool.Create(Task.AppliedCategories[i].enabled));
     end;
     AJObj.AddPair('appliedCategories', AJAppliedCategories);
   end;
@@ -951,7 +951,7 @@ begin
     AJAppliedCategories := TJSONObject.Create;
     for i := 0 to Length(Task.AppliedCategories) - 1 do
     begin
-      AJAppliedCategories.AddPair(Task.AppliedCategories[i].Name, TJSONBool.Create(Task.AppliedCategories[i].enabled));
+      AJAppliedCategories.AddPair(Task.AppliedCategories[i].id, TJSONBool.Create(Task.AppliedCategories[i].enabled));
     end;
     AJObj.AddPair('categories', AJAppliedCategories);
   end;
